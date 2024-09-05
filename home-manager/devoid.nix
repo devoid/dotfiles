@@ -128,6 +128,7 @@
     pkgs.dunst
     pkgs.rofi-wayland # launcher
     pkgs.networkmanagerapplet
+    pkgs.gopsuinfo # https://github.com/nwg-piotr/gopsuinfo
 
     # Coding
     pkgs.git

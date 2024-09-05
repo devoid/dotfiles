@@ -3,3 +3,7 @@ default:
 
 rebuild:
 	scripts/system-rebuild.sh
+
+rebuild-trace:
+	scripts/system-rebuild-trace.sh
+

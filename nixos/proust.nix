@@ -170,6 +170,8 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+    openmoji-color
+    openmoji-black
     (nerdfonts.override {
       fonts = [
         "Ubuntu"

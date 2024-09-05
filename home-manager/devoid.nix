@@ -129,7 +129,6 @@
     pkgs.rofi-wayland # launcher
     pkgs.networkmanagerapplet
     pkgs.gopsuinfo # https://github.com/nwg-piotr/gopsuinfo
-    pkgs.cava # Console based Audio Visualizer for Alsa
 
     # Coding
     pkgs.git
@@ -203,6 +202,7 @@
       nixe = "pushd ~/dotfiles/nixos; just rebuild";
     };
   };
+  programs.cava.enable = true;
 
   programs.neovim = {
     enable = true;

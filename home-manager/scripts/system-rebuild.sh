@@ -42,7 +42,7 @@ fi
 
 current=$(home-manager generations | head -n1)
 
-git commit -am "home-manager ($USER): $current"
+git commit -a -m "home-manager ($USER): $current" -e
 
 popd
 

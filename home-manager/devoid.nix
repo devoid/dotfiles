@@ -194,6 +194,11 @@
     EDITOR = "nvim";
   };
 
+  programs.bash.shellAliases = {
+    hme = "pushd ~/dotfiles/home-manager; just rebuild";
+    nixe = "pushd ~/dotfiles/nixos; just rebuild";
+  };
+
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [

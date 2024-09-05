@@ -170,12 +170,12 @@
   fonts = {
     fontconfig = {
       enable = true;
-      # defaultFonts = {
-      #   emoji = "";
-      #   monospace = "";
-      #   sansSerif = "";
-      #   serif = "";
-      # };
+      defaultFonts = {
+        emoji = ["openmoji-black"];
+        #   monospace = "";
+        #   sansSerif = "";
+        #   serif = "";
+      };
     };
   };
 

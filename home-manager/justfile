@@ -1,0 +1,5 @@
+default:
+	@just --list
+
+rebuild:
+	scripts/system-rebuild.sh

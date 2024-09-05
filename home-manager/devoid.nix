@@ -194,9 +194,12 @@
     EDITOR = "nvim";
   };
 
-  programs.bash.shellAliases = {
-    hme = "pushd ~/dotfiles/home-manager; just rebuild";
-    nixe = "pushd ~/dotfiles/nixos; just rebuild";
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      hme = "pushd ~/dotfiles/home-manager; just rebuild";
+      nixe = "pushd ~/dotfiles/nixos; just rebuild";
+    };
   };
 
   programs.neovim = {

@@ -1,14 +1,5 @@
 default:
 	@just --list
 
-rebuild-pre:
-	git add *.nix
-
 rebuild:
-	just rebuild-pre
 	scripts/system-rebuild.sh
-
-
-rebuild-trace:
-
-rebuild-update:

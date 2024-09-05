@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-if [ -z $1 ]; then
-    export HOST=$1
-else
-    export HOST=$(hostname)
+HOST=$(hostname)
+if [ $1 ]; then
+    HOST=$1
 fi
 
 pushd ~/dotfiles/nixos
@@ -28,7 +27,7 @@ if sudo nixos-rebuild switch &>.nixos-switch.log; then
     echo -e "Done\n"
 else
     echo ""
-    cat nixos-switch.log | grep --color error
+    cat .nixos-switch.log | grep --color error
 
     git restore --staged ./**/*.nix
 

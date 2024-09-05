@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    # ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -52,7 +53,7 @@
   programs.hyprland.enable = true;
 
   # Support for StarTech USB-C video drivers
-  services.xserver.videoDrivers = [ "displaylink" "modsetting" ];
+  services.xserver.videoDrivers = ["displaylink" "modsetting"];
 
   # Configure keymap in X11
   services.xserver = {
@@ -74,7 +75,7 @@
       libvdpau-va-gl
       rocmPackages.clr.icd
     ];
- 
+
     extraPackages32 = with pkgs; [
       driversi686Linux.amdvlk
     ];
@@ -104,7 +105,7 @@
   users.users.devoid = {
     isNormalUser = true;
     description = "Scott Devoid";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       alacritty
       discord
@@ -122,25 +123,26 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+  nix.settings.experimental-features = ["flakes" "nix-command"];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     alejandra
-     git
-     vim
-     wget
-     curl
-     pkgs.gnome3.gnome-tweaks
-     just
+    alejandra
+    git
+    vim
+    wget
+    curl
+    pkgs.gnome3.gnome-tweaks
 
-     davinci-resolve
+    just
 
-     usbutils
-     pciutils
-     bluez-tools
-     pulseaudio
+    davinci-resolve
+
+    usbutils
+    pciutils
+    bluez-tools
+    pulseaudio
   ];
 
   # Set the default editor to vim

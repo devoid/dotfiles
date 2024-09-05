@@ -143,6 +143,7 @@
     pciutils
     bluez-tools
     pulseaudio
+    libnotify
   ];
 
   # Set the default editor to vim

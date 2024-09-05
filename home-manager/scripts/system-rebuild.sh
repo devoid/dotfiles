@@ -40,7 +40,7 @@ else
     exit 1
 fi
 
-current=$(nixos-rebuild generations | head -n1)
+current=$(home-manager generations | head -n1)
 
 git commit -am "home-manager ($USER): $current"
 

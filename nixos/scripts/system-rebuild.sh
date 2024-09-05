@@ -42,7 +42,7 @@ fi
 
 current=$(nixos-rebuild list-generations | grep current)
 
-git commit -am "$current"
+git commit -am "nixos ($HOST): $current"
 
 popd
 

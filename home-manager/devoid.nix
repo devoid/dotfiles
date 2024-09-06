@@ -149,6 +149,7 @@
     pkgs.networkmanagerapplet
     pkgs.gopsuinfo # https://github.com/nwg-piotr/gopsuinfo
     pkgs.playerctl
+    pkgs.pavucontrol
 
     # Coding
     pkgs.git

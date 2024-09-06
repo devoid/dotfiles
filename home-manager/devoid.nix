@@ -163,6 +163,7 @@
     pkgs.kbfs
     pkgs.htop
     pkgs.unzip
+    pkgs.ffmpeg
 
     # Stupid Utilities
     pkgs.google-cloud-sdk

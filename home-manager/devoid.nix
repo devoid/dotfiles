@@ -236,4 +236,5 @@
     enable = true;
   };
   services.dunst.enable = true;
+  services.swayosd.enable = true;
 }

@@ -55,6 +55,12 @@
         "${pkgs.networkmanagerapplet}/bin/nm-applet --indicator"
       ];
 
+      bindle = [
+        ", XF86AudioMute, exec amixer set Master toggle"
+        ", XF86AudioLowerVolume, exec vol --down"
+        ", XF86AudioRaiseVolume, exec vol --up"
+      ];
+
       bind = let
         kitty = "${pkgs.kitty}/bin/kitty";
         binding = mod: cmd: key: arg: "${mod}, ${key}, ${cmd}, ${arg}";

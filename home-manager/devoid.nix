@@ -98,6 +98,10 @@
           "SUPER, O, fakefullscreen"
           "SUPER, P, togglesplit"
 
+          ", XF86AudioPrev, exec, playerctl --previous"
+          ", XF86AudioPlay, exec, playerctl --play-pause"
+          ", XF86AudioNext, exec, playerctl --next"
+
           (mvfocus "k" "u")
           (mvfocus "j" "d")
           (mvfocus "l" "r")
@@ -227,16 +231,11 @@
     '';
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  # Waybar status bar for Wayland
-  programs.waybar.enable = true;
-
-  services.keybase.enable = true;
-  services.kbfs = {
-    enable = true;
-  };
   services.dunst.enable = true;
+  programs.home-manager.enable = true;
+  services.keybase.enable = true;
+  services.kbfs.enable = true;
+  services.playerctld.enable = true;
   services.swayosd.enable = true;
+  programs.waybar.enable = true;
 }

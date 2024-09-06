@@ -55,6 +55,13 @@
         "${pkgs.networkmanagerapplet}/bin/nm-applet --indicator"
       ];
 
+      # Bind flags
+      #
+      # l -> locked					m -> mouse
+      # r -> release				t -> transparent
+      # e -> repeat					s -> separate
+      # n -> non-consuming  p -> bypass app
+
       bindle = [
         ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
         ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
@@ -75,20 +82,9 @@
         arr = [1 2 3 4 5 6 7];
       in
         [
-          # "CTRL SHIFT, R,  ${e} quit; ags -b hypr"
-          # "SUPER, R,       ${e} -t launcher"
-          # "SUPER, Tab,     ${e} -t overview"
-          # ",XF86PowerOff,  ${e} -r 'powermenu.shutdown()'"
-          # ",XF86Launch4,   ${e} -r 'recorder.start()'"
-          # ",Print,         exec, ${screenshot}"
-          # "SHIFT,Print,    exec, ${screenshot} --full"
-          "SUPER, Return, exec, ${kitty}" # xterm is a symlink, not actually xterm
+          "SUPER, Return, exec, ${kitty}"
           "SUPER, W, exec, firefox"
           "SUPER, S, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun -show-icons"
-          # "SUPER, E, exec, wezterm -e lf"
-
-          # youtube
-          # ", XF86Launch1,  exec, ${yt}"
 
           "ALT, Tab, focuscurrentorlast"
           "CTRL ALT, Delete, exit"
@@ -121,15 +117,26 @@
         ]
         ++ (map (i: ws (toString i) (toString i)) arr)
         ++ (map (i: mvtows (toString i) (toString i)) arr);
+
+      decoration = {
+        drop_shadow = "yes";
+        shadow_range = 8;
+        shadow_render_power = 2;
+
+        dim_inactive = false;
+
+        blur = {
+          enabled = true;
+          size = 8;
+          passes = 3;
+          new_optimizations = "on";
+          noise = 0.01;
+          contrast = 0.9;
+          brightness = 0.8;
+          popups = true;
+        };
+      };
     };
-    #    "$mod" = "SUPER";
-    #     bindm = [
-    #       # mouse movements
-    #       "$mod, mouse:272, movewindow"
-    #       "$mod, mouse:273, resizewindow"
-    #       "$mod ALT, mouse:272, resizewindow"
-    #     ];
-    #  };
   };
 
   # The home.packages option allows you to install Nix packages into your

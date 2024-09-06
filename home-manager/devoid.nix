@@ -165,6 +165,9 @@
     pkgs.unzip
     pkgs.ffmpeg
 
+    # Codecs
+    pkgs.libwebp
+
     # Stupid Utilities
     pkgs.google-cloud-sdk
 

@@ -6,7 +6,7 @@ if [ $1 ]; then
     USER=$1
 fi
 
-pushd ~/dotfiles/home-manager
+pushd $HOME/dotfiles/home-manager
 
 $EDITOR ${USER}.nix
 

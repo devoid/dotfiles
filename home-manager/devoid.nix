@@ -52,7 +52,7 @@
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.dunst}/bin/dunst"
-        "${pkgs.swww}/bin/swww-daemon"
+        # "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.networkmanagerapplet}/bin/nm-applet --indicator"
       ];
 
@@ -152,6 +152,7 @@
     pkgs.playerctl
     pkgs.pavucontrol
     pkgs.swww
+    pkgs.mpvpaper
 
     # Coding
     pkgs.git

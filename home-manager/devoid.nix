@@ -153,6 +153,7 @@
     pkgs.pavucontrol
     pkgs.swww
     pkgs.mpvpaper
+    pkgs.psensor
 
     # Coding
     pkgs.git

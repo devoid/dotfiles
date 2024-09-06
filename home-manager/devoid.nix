@@ -27,7 +27,7 @@
     settings = {
       monitor = [
         # name, resolution, position, scale
-        "DP-5,preferred,0x0,2"
+        "DP-2,preferred,0x0,2"
         "eDP-1,preferred,auto,1"
         "DVI-I-1,disable"
         "DVI-I-2,disable"

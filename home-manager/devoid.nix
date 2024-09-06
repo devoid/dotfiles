@@ -141,6 +141,7 @@
     pkgs.rofi-wayland # launcher
     pkgs.networkmanagerapplet
     pkgs.gopsuinfo # https://github.com/nwg-piotr/gopsuinfo
+    pkgs.playerctl
 
     # Coding
     pkgs.git

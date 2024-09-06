@@ -163,7 +163,7 @@
     pkgs.kbfs
     pkgs.htop
     pkgs.unzip
-    pkgs.ffmpeg
+    pkgs.ffmpeg_7-full
 
     # Codecs
     pkgs.libwebp

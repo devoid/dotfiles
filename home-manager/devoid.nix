@@ -98,9 +98,9 @@
           "SUPER, O, fakefullscreen"
           "SUPER, P, togglesplit"
 
-          ", XF86AudioPrev, exec, playerctl --previous"
-          ", XF86AudioPlay, exec, playerctl --play-pause"
-          ", XF86AudioNext, exec, playerctl --next"
+          ", XF86AudioPrev, exec, playerctl previous"
+          ", XF86AudioPlay, exec, playerctl play-pause"
+          ", XF86AudioNext, exec, playerctl next"
 
           (mvfocus "k" "u")
           (mvfocus "j" "d")

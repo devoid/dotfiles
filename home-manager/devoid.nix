@@ -56,9 +56,11 @@
       ];
 
       bindle = [
-        ", XF86AudioMute, exec, amixer set Master toggle"
-        ", XF86AudioLowerVolume, exec, vol --down"
-        ", XF86AudioRaiseVolume, exec, vol --up"
+        ", XF86AudioMute, exec, swayosd-client --output-volume mute-toggle"
+        ", XF86AudioLowerVolume, exec, swayosd-client --output-volume lower"
+        ", XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise"
+        ", XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
+        ", XF86MonBrightnessDown, exec, swayosd-client --brightness lower"
       ];
 
       bind = let

@@ -56,9 +56,9 @@
       ];
 
       bindle = [
-        ", XF86AudioMute, exec amixer set Master toggle"
-        ", XF86AudioLowerVolume, exec vol --down"
-        ", XF86AudioRaiseVolume, exec vol --up"
+        ", XF86AudioMute, exec, amixer set Master toggle"
+        ", XF86AudioLowerVolume, exec, vol --down"
+        ", XF86AudioRaiseVolume, exec, vol --up"
       ];
 
       bind = let

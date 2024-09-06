@@ -231,6 +231,8 @@
     '';
   };
 
+  programs.spotify-player.enable = true;
+
   services.dunst.enable = true;
   programs.home-manager.enable = true;
   services.keybase.enable = true;

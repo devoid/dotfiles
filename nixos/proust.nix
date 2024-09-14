@@ -44,6 +44,34 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  services.prometheus.exporters.node = {
+    enable = true;
+    port = 9100;
+    enabledCollectors = [
+      "logind"
+      "systemd"
+    ];
+    disabledCollectors = [
+      "textfile"
+    ];
+    openFirewall = true;
+    firewallFilter = "-i br0 -p tcp -m tcp --dport 9100";
+  };
+
+  services.prometheus = {
+    enable = true;
+
+    globalConfig.scrape_interval = "1s";
+    scrapeConfigs = [
+      {
+        job_name = "proust_node";
+        static_configs = [
+          {targets = ["localhost:${toString config.services.prometheus.exporters.node.port}"];}
+        ];
+      }
+    ];
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

@@ -17,7 +17,7 @@
 
   boot.initrd.luks.devices."luks-88209ead-075f-4795-88cc-92b85d12fdeb".device = "/dev/disk/by-uuid/88209ead-075f-4795-88cc-92b85d12fdeb";
   networking.hostName = "proust"; # Define your hostname.
-  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -71,6 +71,8 @@
       }
     ];
   };
+
+  services.resolved.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -133,7 +135,7 @@
   users.users.devoid = {
     isNormalUser = true;
     description = "Scott Devoid";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["wheel"];
     packages = with pkgs; [
       alacritty
       discord
@@ -144,6 +146,7 @@
       spotify
       steamcmd
       steam-tui
+      vscode-fhs
     ];
   };
 

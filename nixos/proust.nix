@@ -179,6 +179,7 @@
     # Wine
     wineWowPackages.stable
     winetricks
+    bottles
   ];
 
   # Set the default editor to vim

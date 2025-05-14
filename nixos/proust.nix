@@ -175,6 +175,10 @@
     bluez-tools
     pulseaudio
     libnotify
+
+    # Wine
+    wineWowPackages.stable
+    winetricks
   ];
 
   # Set the default editor to vim

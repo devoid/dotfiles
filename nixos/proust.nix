@@ -82,6 +82,9 @@
   services.xserver.desktopManager.gnome.enable = true;
   programs.hyprland.enable = true;
 
+  # Possible fix to 'login keyring did not get unlocked' issue?
+  security.pam.services.gdm.enableGnomeKeyring = true;
+
   # Support for StarTech USB-C video drivers
   services.xserver.videoDrivers = ["displaylink" "modsetting"];
 

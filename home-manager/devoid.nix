@@ -180,6 +180,7 @@
     # Software defined radio
     pkgs.gnuradio
     pkgs.gqrx
+    pkgs.rtl-sdr
     pkgs.sdrangel
     pkgs.sdrpp
 

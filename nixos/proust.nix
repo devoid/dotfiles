@@ -111,6 +111,9 @@
     ];
   };
 
+  # Enable RTL-SDR USB dongle support.
+  hardware.rtl-sdr.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -135,7 +138,8 @@
   users.users.devoid = {
     isNormalUser = true;
     description = "Scott Devoid";
-    extraGroups = ["wheel"];
+    # "plugdev" for SDR access.
+    extraGroups = ["wheel" "plugdev"];
     packages = with pkgs; [
       alacritty
       discord

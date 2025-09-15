@@ -177,6 +177,12 @@
     pkgs.chromium
     pkgs.firefox
 
+    # Software defined radio
+    pkgs.gnuradio
+    pkgs.gqrx
+    pkgs.sdrangel
+    pkgs.sdrpp
+
     # Fun
     pkgs.cowsay
     pkgs.fortune

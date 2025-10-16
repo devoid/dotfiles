@@ -155,6 +155,9 @@
     pkgs.mpvpaper
     pkgs.bluetuith
 
+    # Shell
+    pkgs.tmux
+
     # Coding
     pkgs.git
     pkgs.nil # Nix lsp implementation http://github.com/oxalica/nil

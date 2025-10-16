@@ -233,6 +233,7 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+    SHELL = "zsh";
   };
 
   programs.bash = {
@@ -243,7 +244,10 @@
     };
   };
   programs.cava.enable = true;
-
+  programs.hyprlock = {
+    enable = true;
+  };
+  programs.home-manager.enable = true;
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -258,7 +262,24 @@
       syntax on
     '';
   };
+  programs.tmux = {
+    enable = true;
+    shell = "${pkgs.zsh}/bin/zsh";
+  };
+  programs.spotify-player.enable = true;
+  programs.waybar.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      hme = "pushd ~/dotfiles/home-manager; just rebuild";
+      nixe = "pushd ~/dotfiles/nixos; just rebuild";
+    };
+  };
 
+  services.dunst.enable = true;
   services.hypridle = {
     enable = true;
     settings = {
@@ -281,17 +302,8 @@
     };
   };
 
-  programs.hyprlock = {
-    enable = true;
-  };
-
-  programs.spotify-player.enable = true;
-
-  services.dunst.enable = true;
-  programs.home-manager.enable = true;
   services.keybase.enable = true;
   services.kbfs.enable = true;
   services.playerctld.enable = true;
   services.swayosd.enable = true;
-  programs.waybar.enable = true;
 }

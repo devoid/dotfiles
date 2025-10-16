@@ -17,8 +17,6 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  # DIFF
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
